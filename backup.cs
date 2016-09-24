@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KOP.database
+namespace KOP
 {
     public partial class backup : Component
     {
@@ -20,14 +20,6 @@ namespace KOP.database
             container.Add(this);
 
             InitializeComponent();
-        }
-
-        private int interval { get; set; }
-
-
-        private void interval_of_backup_Tick(object sender, EventArgs e)
-        {
-            // body of backup db
         }
     }
 }

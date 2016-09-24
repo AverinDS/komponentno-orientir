@@ -8,26 +8,25 @@ using System.Threading.Tasks;
 
 namespace KOP.database
 {
-    public partial class backup : Component
+    public partial class work_with_db : Component
     {
-        public backup()
+        public work_with_db()
         {
             InitializeComponent();
         }
 
-        public backup(IContainer container)
+        public work_with_db(IContainer container)
         {
             container.Add(this);
 
             InitializeComponent();
         }
 
-        private int interval { get; set; }
-
-
-        private void interval_of_backup_Tick(object sender, EventArgs e)
+        private string name_of_table
         {
-            // body of backup db
+            set { name_of_table = value; }
         }
+
+
     }
 }
