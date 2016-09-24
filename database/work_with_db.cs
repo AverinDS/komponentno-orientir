@@ -6,6 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Data;
+using System.Data.SQLite;
+using System.IO;
+
 namespace KOP.database
 {
     public partial class work_with_db : Component
@@ -20,6 +24,11 @@ namespace KOP.database
             container.Add(this);
 
             InitializeComponent();
+        }
+
+        private string path_to_db
+        {
+            set { path_to_db = value; }
         }
 
         private string name_of_table

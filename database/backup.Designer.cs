@@ -32,6 +32,7 @@
             this.choose_db = new System.Windows.Forms.OpenFileDialog();
             this.save_db = new System.Windows.Forms.SaveFileDialog();
             this.interval_of_backup = new System.Windows.Forms.Timer(this.components);
+            this.restore_db = new System.Windows.Forms.OpenFileDialog();
             // 
             // choose_db
             // 
@@ -40,6 +41,10 @@
             // interval_of_backup
             // 
             this.interval_of_backup.Tick += new System.EventHandler(this.interval_of_backup_Tick);
+            // 
+            // restore_db
+            // 
+            this.restore_db.FileName = "openFileDialog1";
 
         }
 
@@ -48,5 +53,6 @@
         private System.Windows.Forms.OpenFileDialog choose_db;
         private System.Windows.Forms.SaveFileDialog save_db;
         private System.Windows.Forms.Timer interval_of_backup;
+        private System.Windows.Forms.OpenFileDialog restore_db;
     }
 }

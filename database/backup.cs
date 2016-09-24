@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace KOP.database
 {
@@ -22,7 +23,24 @@ namespace KOP.database
             InitializeComponent();
         }
 
-        private int interval { get; set; }
+        private int interval// property of backups time
+        {
+            set
+            {
+                if (value > 0) interval = value;
+                else throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private string path_to_db
+        {
+            set { path_to_db = value; }
+        }
+
+        private string path_to_backup
+        {
+            set { path_to_backup = value; }
+        }
 
 
         private void interval_of_backup_Tick(object sender, EventArgs e)
